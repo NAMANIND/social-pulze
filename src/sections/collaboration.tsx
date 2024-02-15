@@ -34,7 +34,7 @@ export const Collaboration = () => {
 
   const avatarGroupX = useTransform(
     scrollYProgress,
-    [0, 0.23, 0.25, 0.4, 0.45, 0.6, 0.65, 0.8, 1],
+    [0, 0.23, 0.25, 0.4, 0.45, 0.6, 0.65, 0.9, 1],
     ["60px", "60px", "40px", "40px", "20px", "20px", "0px", "0px", "-150px"]
   );
 
