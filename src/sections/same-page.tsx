@@ -43,8 +43,8 @@ export const SamePage = () => {
     [
       animationOrder.initial,
       animationOrder.fadeInEnd,
-      animationOrder.showLoadingScreenEnd,
       animationOrder.createBranchStart,
+      animationOrder.createBranchEnd,
     ],
     [3, 1, 1, 0.5]
   );
@@ -58,7 +58,7 @@ export const SamePage = () => {
       animationOrder.showParagraphTwoEnd,
       animationOrder.hideParagraphTwo,
       animationOrder.showLoadingScreenStart,
-      animationOrder.showLoadingScreenEnd,
+      animationOrder.createBranchStart,
       animationOrder.createBranchEnd,
     ],
     ["50%", "50%", "55%", "-50%", "-50%", "-55%", "0%", "0%", "-27%"]

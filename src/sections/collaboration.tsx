@@ -14,20 +14,16 @@ export const Collaboration = () => {
   });
 
   const scale = useTransform(
-    scrollYProgressIncludingOverlap,
-    [0.1, 0.4, 0.75, 1],
-    [1, 2.5, 4.2, 1]
+    scrollYProgress,
+    [0.1, 0.3, 0.9, 1],
+    [1, 2.5, 2.5, 2.5]
   );
   const x = useTransform(
-    scrollYProgressIncludingOverlap,
-    [0.1, 0.25, 0.75, 1],
-    ["0vw", "-55vw", "-135vw", "-18vw"]
+    scrollYProgress,
+    [0.1, 0.3, 0.5, 0.8],
+    ["0vw", "-40vw", "-35vw", "-30vw"]
   );
-  const y = useTransform(
-    scrollYProgressIncludingOverlap,
-    [0.75, 1],
-    ["0vh", "40vh"]
-  );
+  const y = useTransform(scrollYProgress, [0.75, 1], ["0vh", "40vh"]);
   const opacity = useTransform(scrollYProgress, [0.9, 1], [1, 0]);
 
   const avatarGroupOpacity = useTransform(

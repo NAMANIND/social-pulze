@@ -35,7 +35,8 @@ export const StreamlinedExperience = () => {
       ref={targetRef}
       className="mt-[50vh] flex h-[500vh] items-start justify-start"
     >
-      <div className="sticky top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#CEF144] before:opacity-[var(--opacity-border)]">
+      {/* before:border-[#44f14d] */}
+      <div className="sticky top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#44f14d00]   before:opacity-[var(--opacity-border)] ">
         <motion.p
           aria-hidden
           style={{ x: textX, y: "-50%" }}
@@ -64,8 +65,9 @@ export const StreamlinedExperience = () => {
           <br />
           Experience.
         </motion.p>
-        <span className="absolute left-[calc(50%*var(--scale)+50%)] top-0 z-10 h-full w-[50vw] origin-left scale-[var(--scale)] bg-background opacity-[var(--opacity-border)]" />
-        <span className="absolute left-[calc(50%*var(--scale)+50%-(2.5rem*var(--scale)))] top-0 z-[12] h-full w-[50vw] origin-left scale-[var(--scale)] border-l-[2.5rem] border-[#CEF144] opacity-[var(--opacity-border)]" />
+
+        <span className="absolute left-[calc(50%*var(--scale)+17%)] top-0 z-10 h-full w-[80vw] origin-left scale-[var(--scale)] bg-background opacity-[var(--opacity-border)] " />
+        <span className="absolute  left-[calc(50%*var(--scale)+50%-(36.5rem*var(--scale)))] top-0 z-[12] h-full w-[50vw] origin-left scale-[var(--scale)]  bg-transparent  bg-[url('../../public/sp-1.svg')]  bg-contain bg-no-repeat	opacity-[var(--opacity-border)]   " />
       </div>
     </motion.section>
   );

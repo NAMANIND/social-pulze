@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter, Cousine } from "@next/font/google";
+import { Inter, Cousine, Ubuntu } from "@next/font/google";
 import { Gtag } from "@/components/gtag";
 
 const inter = Inter({
@@ -8,7 +8,7 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-const cousine = Cousine({
+const cousine = Ubuntu({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-cousine",
