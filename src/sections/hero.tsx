@@ -6,9 +6,13 @@ export const Hero = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["end end", "end start"],
+    offset: ["start end", "end start"],
   });
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.35, 0.4, 0.6, 0.8],
+    [0, 0, 1, 1, 0]
+  );
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const position = useTransform(scrollYProgress, (pos) =>
     pos >= 1 ? "relative" : "fixed"
@@ -36,8 +40,8 @@ export const Hero = () => {
       className="relative mb-[8rem] h-screen py-16 text-white before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_100px)_var(--y,_100px),_var(--color-secondary)_0%,_transparent_100%)] before:opacity-40"
     >
       <motion.div
-        style={{ position, opacity, scale, x: "-50%" }}
-        className="fixed left-1/2 z-10 flex flex-col items-center"
+        style={{ position, opacity, scale, top: "20%", x: "-50%" }}
+        className=" fixed left-1/2 z-10 flex flex-col items-center"
       >
         <p className="mb-2 text-xl font-light">
           <span className="font-medium">Projects</span> Beta
