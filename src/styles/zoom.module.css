@@ -34,31 +34,82 @@
   height: 30vh;
 }
 .container .sticky .el:nth-of-type(3) .imageContainer {
-  top: -10vh;
+  top: -9vh;
   left: -25vw;
   width: 20vw;
   height: 45vh;
 }
 .container .sticky .el:nth-of-type(4) .imageContainer {
-  left: 27.5vw;
-  width: 25vw;
-  height: 25vh;
-}
-.container .sticky .el:nth-of-type(5) .imageContainer {
-  top: 27.5vh;
-  left: 5vw;
+  left: 24.5vw;
   width: 20vw;
   height: 25vh;
 }
+.container .sticky .el:nth-of-type(5) .imageContainer {
+  top: 30vh;
+  left: 15vw;
+  width: 40vw;
+  height: 30vh;
+}
 .container .sticky .el:nth-of-type(6) .imageContainer {
-  top: 27.5vh;
-  left: -22.5vw;
-  width: 30vw;
-  height: 25vh;
+  top: 32.5vh;
+  left: -18.5vw;
+  width: 25vw;
+  height: 35vh;
 }
 .container .sticky .el:nth-of-type(7) .imageContainer {
   top: 22.5vh;
-  left: 25vw;
+  left: 20vw;
   width: 15vw;
   height: 15vh;
+  display: none;
+}
+
+.container .sticky .el:nth-of-type(8) .imageContainer {
+  /* Adjust these values as needed */
+  top: -40.5vh;
+  left: -22vw;
+  width: 15vw;
+  height: 15vh;
+}
+
+.container .sticky .el:nth-of-type(9) .imageContainer {
+  /* Adjust these values as needed */
+  top: -31vh;
+  left: 36vw;
+  width: 25vw;
+  height: 34vh;
+}
+
+.container .sticky .el:nth-of-type(10) .imageContainer {
+  /* Adjust these values as needed */
+  top: 30vh;
+  left: -40vw;
+  width: 16vw;
+  height: 30vh;
+  /* display: none; */
+}
+
+.container .sticky .el:nth-of-type(11) .imageContainer {
+  /* Adjust these values as needed */
+  top: 30vh;
+  left: -40vw;
+  width: 16vw;
+  height: 30vh;
+  display: none;
+}
+
+.container .sticky .el:nth-of-type(12) .imageContainer {
+  /* Adjust these values as needed */
+  top: -20vh;
+  left: -42.5vw;
+  width: 13vw;
+  height: 55vh;
+}
+
+.container .sticky .el:nth-of-type(13) .imageContainer {
+  /* Adjust these values as needed */
+  top: 19vh;
+  left: 42vw;
+  width: 12vw;
+  height: 62vh;
 }
