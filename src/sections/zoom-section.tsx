@@ -23,7 +23,7 @@ export default function Zoomsection() {
     pos >= 1 ? "relative" : "fixed"
   );
 
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["0", "25px"]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["0", "15px"]);
 
   const scale4 = useTransform(scrollYProgress, [1, 0], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [1, 0], [1, 5]);
@@ -83,7 +83,7 @@ export default function Zoomsection() {
 
     {
       src: Picture3,
-      scale: scale5,
+      scale: scale9,
     },
   ];
 
