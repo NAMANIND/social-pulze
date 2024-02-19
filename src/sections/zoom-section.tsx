@@ -28,7 +28,11 @@ export default function Zoomsection() {
     [0, 0.8, 1],
     ["0vh", "0vh", "-10vh"] // Adjust the values to interpolate between 0vh and 30vh
   );
-
+  const he = useTransform(
+    scrollYProgress,
+    [0, 0.99, 1],
+    ["0vh", "5vh", "20vh"]
+  );
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   //   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const position = useTransform(scrollYProgress, (pos) =>
@@ -140,7 +144,10 @@ export default function Zoomsection() {
         </div>
       </motion.div>
 
-      <div className={styles.pageoverlay}></div>
+      <motion.div
+        className={styles.pageoverlay}
+        style={{ height: he }}
+      ></motion.div>
     </div>
   );
 }
