@@ -17,6 +17,18 @@ export default function Zoomsection() {
     offset: ["start start", "end end"],
   });
 
+  const height = useTransform(
+    scrollYProgress,
+    [0, 0.8, 1],
+    ["100vh", "100vh", "110vh"]
+  );
+
+  const top = useTransform(
+    scrollYProgress,
+    [0, 0.8, 1],
+    ["0vh", "0vh", "-10vh"] // Adjust the values to interpolate between 0vh and 30vh
+  );
+
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   //   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const position = useTransform(scrollYProgress, (pos) =>
@@ -69,7 +81,7 @@ export default function Zoomsection() {
       scale: scale8,
     },
     {
-      src: Picture5,
+      src: Picture4,
       scale: scale9,
     },
     {
@@ -82,7 +94,7 @@ export default function Zoomsection() {
     },
 
     {
-      src: Picture3,
+      src: Picture2,
       scale: scale9,
     },
   ];
@@ -100,31 +112,35 @@ export default function Zoomsection() {
           </h1>
         </div>
       </motion.div>
-      <div className={styles.sticky}>
-        {pictures.map(({ src, scale }, index) => {
-          return (
-            <>
-              <motion.div key={index} style={{ scale }} className={styles.el}>
-                <motion.div
-                  className={styles.imageContainer}
-                  style={{ borderRadius }}
-                >
-                  {src == Picture1 ? (
-                    <video
-                      src={require("../../public/images/video.mp4")}
-                      autoPlay
-                      muted
-                      loop
-                    />
-                  ) : (
-                    <Image src={src} fill alt="image" placeholder="blur" />
-                  )}
+      <motion.div style={{ height, top }} className={styles.sticky}>
+        <div className={styles.test}>
+          {pictures.map(({ src, scale }, index) => {
+            return (
+              <>
+                <motion.div key={index} style={{ scale }} className={styles.el}>
+                  <motion.div
+                    className={styles.imageContainer}
+                    style={{ borderRadius }}
+                  >
+                    {src == Picture1 ? (
+                      <video
+                        src={require("../../public/images/video.mp4")}
+                        autoPlay
+                        muted
+                        loop
+                      />
+                    ) : (
+                      <Image src={src} fill alt="image" placeholder="blur" />
+                    )}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            </>
-          );
-        })}
-      </div>
+              </>
+            );
+          })}
+        </div>
+      </motion.div>
+
+      <div className={styles.pageoverlay}></div>
     </div>
   );
 }

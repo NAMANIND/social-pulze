@@ -11,11 +11,11 @@ export const Hero = () => {
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.35, 0.4, 0.6, 0.8],
-    [0, 0, 1, 1, 0]
+    [0, 1, 1, 1, 0]
   );
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const position = useTransform(scrollYProgress, (pos) =>
-    pos >= 1 ? "relative" : "fixed"
+    pos >= 1 ? "relative" : "relative"
   );
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export const Hero = () => {
         </p>
         <div className=" align-center align-center flex flex-row justify-center  ">
           <img src="/sp-1.svg" className="h-auto w-10" alt=""></img>
-          <h1 className=" ml-4 text-center  font-heading text-8xl leading-[1]">
+          <h1 className=" ml-4 text-center  font-heading text-[84px]    font-bold ">
             Social Pulze
           </h1>
         </div>
