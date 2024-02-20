@@ -34,8 +34,12 @@ export default function Zoomsection() {
     [0, 0.8, 1],
     ["0vh", "0vh", "0vh"] // Adjust the values to interpolate between 0vh and 30vh
   );
-  const heightover = useTransform(overl, [0, 0.2, 0.6], ["15vh", "8vh", "0vh"]);
-  const opacityover = useTransform(overl, [0, 0.2, 0.6], [1, 0.8, 0.6]);
+  const heightover = useTransform(
+    overl,
+    [0, 0.2, 0.6],
+    ["15vh", "15vh", "15vh"]
+  );
+  const opacityover = useTransform(overl, [0, 0.6], [1, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   //   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const position = useTransform(scrollYProgress, (pos) =>
