@@ -12,34 +12,37 @@ import { useRef } from "react";
 
 export default function Zoomsection() {
   const container = useRef(null);
+  const over = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
+    offset: ["start start", "end end"],
+  });
+
+  const { scrollYProgress: overl } = useScroll({
+    target: over,
     offset: ["start start", "end end"],
   });
 
   const height = useTransform(
     scrollYProgress,
     [0, 0.8, 1],
-    ["100vh", "100vh", "110vh"]
+    ["100vh", "100vh", "100vh"]
   );
 
   const top = useTransform(
     scrollYProgress,
     [0, 0.8, 1],
-    ["0vh", "0vh", "-10vh"] // Adjust the values to interpolate between 0vh and 30vh
+    ["0vh", "0vh", "0vh"] // Adjust the values to interpolate between 0vh and 30vh
   );
-  const he = useTransform(
-    scrollYProgress,
-    [0, 0.99, 1],
-    ["0vh", "5vh", "20vh"]
-  );
+  const heightover = useTransform(overl, [0, 0.2, 0.6], ["15vh", "8vh", "0vh"]);
+  const opacityover = useTransform(overl, [0, 0.2, 0.6], [1, 0.8, 0.6]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   //   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const position = useTransform(scrollYProgress, (pos) =>
     pos >= 1 ? "relative" : "fixed"
   );
 
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["0", "15px"]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], ["0", "20px"]);
 
   const scale4 = useTransform(scrollYProgress, [1, 0], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [1, 0], [1, 5]);
@@ -74,11 +77,11 @@ export default function Zoomsection() {
     },
     {
       src: Picture7,
-      scale: scale9,
+      scale: scale5,
     },
     {
       src: Picture7,
-      scale: scale9,
+      scale: scale5,
     },
     {
       src: Picture6,
@@ -86,7 +89,7 @@ export default function Zoomsection() {
     },
     {
       src: Picture4,
-      scale: scale9,
+      scale: scale8,
     },
     {
       src: Picture4,
@@ -94,7 +97,7 @@ export default function Zoomsection() {
     },
     {
       src: Picture2,
-      scale: scale6,
+      scale: scale9,
     },
 
     {
@@ -128,6 +131,7 @@ export default function Zoomsection() {
                   >
                     {src == Picture1 ? (
                       <video
+                        ref={over}
                         src={require("../../public/images/video.mp4")}
                         autoPlay
                         muted
@@ -146,7 +150,7 @@ export default function Zoomsection() {
 
       <motion.div
         className={styles.pageoverlay}
-        style={{ height: he }}
+        style={{ height: heightover, opacity: opacityover }}
       ></motion.div>
     </div>
   );

@@ -12,7 +12,7 @@
 .pageoverlay {
   background: linear-gradient(to top, #cbff73, rgba(0, 0, 0, 0));
   position: absolute;
-  height: 20vh;
+  height: 0vh;
   right: 0;
   bottom: 0;
   left: 0;
@@ -44,8 +44,8 @@
 }
 .container .sticky .el:nth-of-type(3) .imageContainer {
   top: -9vh;
-  left: -25vw;
-  width: 20vw;
+  left: -24.5vw;
+  width: 21vw;
   height: 45vh;
 }
 .container .sticky .el:nth-of-type(4) .imageContainer {
@@ -55,10 +55,10 @@
 }
 .container .sticky .el:nth-of-type(5) .imageContainer {
   /* last */
-  top: 30vh;
+  top: 40vh;
   left: 15vw;
   width: 40vw;
-  height: 30vh;
+  height: 50vh;
 }
 .container .sticky .el:nth-of-type(6) .imageContainer {
   /* last */
@@ -78,8 +78,8 @@
 .container .sticky .el:nth-of-type(8) .imageContainer {
   /* Adjust these values as needed */
   top: -40.5vh;
-  left: -22vw;
-  width: 15vw;
+  left: -24.5vw;
+  width: 22vw;
   height: 15vh;
 }
 
@@ -94,10 +94,10 @@
 .container .sticky .el:nth-of-type(10) .imageContainer {
   /* last */
   /* Adjust these values as needed */
-  top: 30vh;
+  top: 40vh;
   left: -40vw;
   width: 16vw;
-  height: 30vh;
+  height: 50vh;
   /* display: none; */
 }
 
@@ -112,17 +112,17 @@
 
 .container .sticky .el:nth-of-type(12) .imageContainer {
   /* Adjust these values as needed */
-  top: -20vh;
+  top: -18vh;
   left: -42.5vw;
   width: 13vw;
-  height: 55vh;
+  height: 60vh;
 }
 
 .container .sticky .el:nth-of-type(13) .imageContainer {
   /* Adjust these values as needed */
 
   /* last */
-  top: 29vh;
+  top: 25vh;
   left: 42vw;
   width: 12vw;
   height: 75vh;
