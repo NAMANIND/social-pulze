@@ -48,12 +48,8 @@ export const Hero = () => {
         </p>
         <p className="mb-8 text-center text-xs font-light text-text">
           by{" "}
-          <a
-            href="https://www.codesandbox.com"
-            target="_blank"
-            rel="noopener nofollow noreferrer"
-          >
-            CodeSandbox
+          <a href="#" target="_blank" rel="noopener nofollow noreferrer">
+            NAMAN
           </a>
           ,
           <br />

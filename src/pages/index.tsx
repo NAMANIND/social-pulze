@@ -38,7 +38,7 @@ export default function Home() {
             video we can make this responsive as well 😁
             <br />
             <a
-              href="https://github.com/frontendfyi/Scroll-Animations-With-Framer-Motion--Codesandbox-Projects"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 block underline"
